@@ -13,9 +13,10 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 jar {
-	baseName = 'cheese-mvc'
+	baseName = 'cheese-mvc-persistent'
 	version = '0.0.1-SNAPSHOT'
 }
 
@@ -35,6 +36,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-bootRun {
+bootRun    {
+    //sourceResources sourceSets.main
 	addResources = true
 }
